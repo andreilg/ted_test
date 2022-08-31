@@ -4,8 +4,8 @@ class Awesome {
   bool get isAwesome => true;
 }
 
-///dec
-class Awesomest {
-  ///
-  bool get isAwesomest => true;
-}
+// ///dec
+// class Awesomest {
+//   ///
+//   bool get isAwesomest => true;
+// }
