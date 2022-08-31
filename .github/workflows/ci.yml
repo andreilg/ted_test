@@ -35,3 +35,6 @@ jobs:
           files: coverage/lcov.info
           flags: unittests
           fail_ci_if_error: true
+          
+      - name: Very Good Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v1.2.1
