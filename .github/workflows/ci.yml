@@ -29,5 +29,5 @@ jobs:
       - name: Run tests and collect coverage
         run: dart test --coverage=coverage && dart run coverage:format_coverage --packages=.dart_tool/package_config.json --lcov --in=coverage --out=coverage/lcov.info --report-on=lib
         
-      - name: Validate 100% code coverage
+      - name: Verify 100% coverage
         uses: VeryGoodOpenSource/very_good_coverage@v1.2.1
