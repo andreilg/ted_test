@@ -29,7 +29,7 @@ jobs:
       - name: Run tests with coverage
         run: dart test --coverage=coverage
         
-      - name: Convert coverage to LCOV
+      - name: Generate LCOV file
         run: dart run coverage:format_coverage --packages=.dart_tool/package_config.json --lcov --in=coverage --out=coverage/lcov.info --report-on=lib
         
       - name: Codecov
