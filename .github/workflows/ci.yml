@@ -26,11 +26,12 @@ jobs:
       - name: Analyze project source
         run: dart analyze --fatal-infos
         
-      - name: Run tests
-        run: dart test --coverage="coverage"
+      - name: Run tests with coverage
+        run: dart test --coverage=coverage.json
+        
+      - name: Convert coverage to LCOV
+        run: dart run coverage:format_coverage --packages=.dart_tool/package_config.json --lcov --in=coverage/coverage.json --out=coverage/lcov.info  --report-on=lib
         
       - name: Codecov
         uses: codecov/codecov-action@v3.1.0
-        with:
-          files: coverage
-
+  
