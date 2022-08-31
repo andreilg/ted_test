@@ -4,5 +4,3 @@
 library ted_test;
 
 export 'src/ted_test_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
