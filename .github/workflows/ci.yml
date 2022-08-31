@@ -32,7 +32,7 @@ jobs:
       - name: Validate coverage meets minimum threshold
         uses: VeryGoodOpenSource/very_good_coverage@v1.2.1
         
-      - name: Upload coverage report to Codecov
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
           flags: unittests
