@@ -9,7 +9,7 @@ on:
 
 jobs:
   first:
-    name: Verify
+    name: Semantic Pull Request
     runs-on: ubuntu-latest
     steps:
       - name: Verify title
