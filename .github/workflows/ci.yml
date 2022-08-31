@@ -32,5 +32,5 @@ jobs:
       - name: Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
-          files: coverage/test/ted_test_test.dart.vm.json
+          files: coverage
 
