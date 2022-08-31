@@ -29,9 +29,14 @@ jobs:
       - name: Run tests with coverage
         run: dart test --coverage=coverage
         
-      - name: Generate LCOV file
+      - name: Generate LCOV coverage report
         run: dart run coverage:format_coverage --packages=.dart_tool/package_config.json --lcov --in=coverage --out=coverage/lcov.info --report-on=lib
         
-      - name: Codecov
+      - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3.1.0
-  
+        with:
+          directory: coverage
+          files: lcov.info
+          flags: unittests
+          fail_ci_if_error: true
+          verbose: true
