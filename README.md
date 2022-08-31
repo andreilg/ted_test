@@ -1,4 +1,5 @@
 ![CI](https://github.com/andreilg/ted_test/actions/workflows/ci.yml/badge.svg)
+[![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
 
 <!-- 
 This README describes the package. If you publish this package to pub.dev,
