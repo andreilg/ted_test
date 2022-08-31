@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3.0.2
 
       - name: Setup Dart SDK
@@ -26,7 +26,7 @@ jobs:
       - name: Analyze project source
         run: dart analyze --fatal-infos
         
-      - name: Run tests and collect coverage
+      - name: Run tests with coverage
         run: dart test --coverage=coverage && dart run coverage:format_coverage --packages=.dart_tool/package_config.json --lcov --in=coverage --out=coverage/lcov.info --report-on=lib
         
       - name: Verify 100% coverage
