@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/andreilg/ted_test/branch/main/graph/badge.svg?token=wtjBrKqbZE)](https://codecov.io/gh/andreilg/ted_test)
 [![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
 
 <!-- 
