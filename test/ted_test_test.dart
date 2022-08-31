@@ -10,7 +10,7 @@ void main() {
     });
 
     test('First Test', () {
-      expect(awesome.isAwesome, isFalse);
+      expect(awesome.isAwesome, isTrue);
     });
   });
 }
