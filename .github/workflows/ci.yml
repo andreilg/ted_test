@@ -25,6 +25,6 @@ jobs:
 
       - name: Analyze project source
         run: dart analyze --fatal-infos
-
-      - name: Run tests
-        run: dart test
+        
+      - name: Run tests with coverage
+        run: dart run coverage:test_with_coverage
