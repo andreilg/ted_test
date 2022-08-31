@@ -13,4 +13,9 @@ void main() {
       expect(awesome.isAwesome, isTrue);
     });
   });
+  group('description', () {
+    final awesomest = Awesomest();
+
+    test('', () => expect(awesomest.isAwesomest, isTrue));
+  });
 }
