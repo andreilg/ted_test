@@ -3,6 +3,9 @@ name: Continuous Deployment
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - pubspec.yaml
+      - CHANGELOG.md
 
 jobs:
   first:
@@ -11,11 +14,8 @@ jobs:
 
     steps:
       - name: Create release and changelog
-        uses: google-github-actions/release-please-action@v3.1.2
+        uses: TriPSs/conventional-changelog-action@v3.14.1 
         with:
-          release-type: dart
-          package-name: ted_test
-          bump-minor-pre-major: true
-          command: github-release
-          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           version-file: pubspec.yaml
+          fallback-version: 0.0.1
