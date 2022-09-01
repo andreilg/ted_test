@@ -3,9 +3,6 @@ name: Continuous Deployment
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - pubspec.yaml
-      - CHANGELOG.md
 
 jobs:
   first:
@@ -23,13 +20,3 @@ jobs:
           github-token: ${{ secrets.ACTION_TOKEN }}
           version-file: pubspec.yaml
           fallback-version: 0.0.1
-
-      - name: Create release
-        uses: actions/create-release@v1
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
-        with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
