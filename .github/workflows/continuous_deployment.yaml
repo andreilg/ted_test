@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.0.2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.ACTION_TOKEN }}
+          persist-credentials: false
     
       - name: Create changelog
         id: changelog
