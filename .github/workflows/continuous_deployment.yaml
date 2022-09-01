@@ -14,11 +14,9 @@ jobs:
         uses: actions/checkout@v3.0.2
         
       - name: Create changelog
-        id: changelog
         uses: TriPSs/conventional-changelog-action@v3.14.1 
         with:
-          version-file: pubspec.yaml
-          fallback-version: 0.0.1
+          version-file: ./pubspec.yaml
 
 
 
