@@ -20,6 +20,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           version-file: 'pubspec.yaml'
 
 
