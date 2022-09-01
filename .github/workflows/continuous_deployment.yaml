@@ -12,9 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          github-token: ${{ secrets.ACTION_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Conventional Changelog Action
         uses: TriPSs/conventional-changelog-action@v3
         with:
-          github-token: ${{ secrets.ACTION_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
