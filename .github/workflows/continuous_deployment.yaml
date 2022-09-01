@@ -15,4 +15,7 @@ jobs:
         with:
           release-type: dart
           package-name: ted_test
+          bump-minor-pre-major: true
+          command: github-release
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+          version-file: pubspec.yaml
