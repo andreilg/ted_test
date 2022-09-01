@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: idk
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.ACTION_TOKEN }}
+          persist-credentials: false
+    
       - name: Create changelog
         uses: TriPSs/conventional-changelog-action@v3.14.1 
         with:
