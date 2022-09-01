@@ -12,4 +12,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.0.2
+        
+      - name: Create changelog
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3.14.1 
+        with:
+          github-token: ${{ secrets.ACTION_TOKEN }}
+          version-file: pubspec.yaml
+          fallback-version: 0.0.1
+
+
 
