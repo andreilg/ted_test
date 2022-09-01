@@ -3,6 +3,9 @@ name: Continuous Deployment
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'pubspec.yaml'
+      - 'CHANGELOG.md'
 
 jobs:
   first:
