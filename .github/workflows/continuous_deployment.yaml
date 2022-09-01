@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create release and changelog
+      - name: Create changelog
         uses: TriPSs/conventional-changelog-action@v3.14.1 
         with:
           github-token: ${{ secrets.ACTION_TOKEN }}
