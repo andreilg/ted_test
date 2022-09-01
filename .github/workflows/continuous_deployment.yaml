@@ -1,8 +1,7 @@
 name: Conventional Changelog Action
 on:
   push:
-    branches:
-      - master
+    branches: [ main ]
     paths-ignore:
       - 'pubspec.yaml'
       - 'CHANGELOG.md'
